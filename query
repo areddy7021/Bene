@@ -3,3 +3,6 @@ FROM EIM.STG_BENEFIT_DATA S JOIN EIM.ETL_BATCH_LOG L ON S.BATCH_ID=L.BATCH_ID
 WHERE BATCH_STATUS='KAFKA_READY'
 order by plan_cd, state_cd, sequence_order
 
+Insert into EXPORT_TABLE (PLAN_CD,STATE_CD,EFF_DT,CANCEL_DT,PLAN_PLATFORM,PLAN_TYPE,BENEFIT_CATEGORY_NAME,BENEFIT_TYPE_NAME,BENEFIT_SUB_TYPE_NAME,BENEFIT_TEXT,SEQUENCE_ORDER,LST_MOD_DATE) values ('K','OR',to_date('01-MAR-05','DD-MON-RR'),to_date('31-DEC-99','DD-MON-RR'),'M&R','AARP_Supplement_Plan','Medicare ''Part A'' eligible services','Blood or packed red blood cells under Part A (first 3 pints)',null,'The plan pays 50% of the reasonable cost.',5,to_timestamp('25-APR-12 02.57.38.957604000 PM','DD-MON-RR HH.MI.SS.FF AM'));
+
+

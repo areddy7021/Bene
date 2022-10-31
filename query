@@ -1,0 +1,5 @@
+SELECT plan_cd, state_cd, eff_dt, cancel_dt, plan_platform, plan_type, benefit_category_name, benefit_type_name, benefit_sub_type_name, benefit_text, sequence_order, lst_mod_date
+FROM EIM.STG_BENEFIT_DATA S JOIN EIM.ETL_BATCH_LOG L ON S.BATCH_ID=L.BATCH_ID
+WHERE BATCH_STATUS='KAFKA_READY'
+order by plan_cd, state_cd, sequence_order
+

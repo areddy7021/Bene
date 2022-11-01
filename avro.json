@@ -1,0 +1,1154 @@
+{
+	"type": "record",
+	"name": "CanonicalModel",
+	"namespace": "com.optum.b360.canonicalmodel.model",
+	"fields": [{
+		"name": "BenefitPlan",
+		"type": {
+			"type": "record",
+			"name": "BenefitPlan",
+			"fields": [{
+					"name": "BenefitPlanID",
+					"type": "string"
+				},
+				{
+					"name": "BenefitPlanName",
+					"type": [
+						"null",
+						"string"
+					],
+					"default": null
+				},
+				{
+					"name": "BenefitPlanEffectiveDate",
+					"type": "long",
+					"logicalType": "timestamp-millis"
+				},
+				{
+					"name": "BenefitPlanPlatform",
+					"type": "string"
+				},
+				{
+					"name": "BenefitPlanPolicyInformationSection",
+					"type": {
+						"type": "record",
+						"name": "BenefitPlanPolicyInformationSection",
+						"fields": [{
+								"name": "CustomerName",
+								"type": [
+									"null",
+									"string"
+								],
+								"default": null
+							},
+							{
+								"name": "OrganizationID",
+								"type": [
+									"null",
+									"string"
+								],
+								"default": null
+							},
+							{
+								"name": "DunsNumberID",
+								"type": [
+									"null",
+									"string"
+								],
+								"default": null
+							},
+							{
+								"name": "ProductYear",
+								"type": [
+									"null",
+									"string"
+								],
+								"default": null
+							},
+							{
+								"name": "BenefitAccumlatorType",
+								"type": [
+									"null",
+									"string"
+								],
+								"default": null
+							},
+							{
+								"name": "ProductCode",
+								"type": [
+									"null",
+									"string"
+								],
+								"default": null
+							},
+							{
+								"name": "PlanName",
+								"type": [
+									"null",
+									"string"
+								]
+							},
+							{
+								"name": "BusinessSegment",
+								"type": [
+									"null",
+									"string"
+								],
+								"default": null
+							},
+							{
+								"name": "FundingArrangement",
+								"type": [
+									"null",
+									"string"
+								],
+								"default": null
+							},
+							{
+								"name": "StateOfIssue",
+								"type": [
+									"null",
+									{
+										"type": "array",
+										"items": "string"
+									}
+								]
+							},
+							{
+								"name": "Erisa",
+								"type": [
+									"null",
+									"string"
+								],
+								"default": null
+							},
+							{
+								"name": "Author",
+								"type": [
+									"null",
+									"string"
+								],
+								"default": null
+							},
+							{
+								"name": "RevisionDate",
+								"type": "long",
+								"logicalType": "timestamp-millis"
+							},
+							{
+								"name": "RevisionReason",
+								"type": [
+									"null",
+									"string"
+								],
+								"default": null
+							},
+							{
+								"name": "CancellationDate",
+								"type": "long",
+								"logicalType": "timestamp-millis",
+								"default": 253402214400000
+							},
+							{
+								"name": "planType",
+								"type": [
+									"null",
+									"string"
+								],
+								"default": null
+							},
+							{
+								"name": "planSubType",
+								"type": [
+									"null",
+									"string"
+								],
+								"default": null
+							},
+							{
+								"name": "AdditionalInfo",
+								"type": [
+									"null",
+									{
+										"type": "array",
+										"items": {
+											"type": "record",
+											"name": "AdditionalInfo",
+											"fields": [{
+													"name": "Type",
+													"type": [
+														"null",
+														"string"
+													],
+													"default": null
+												},
+												{
+													"name": "Key",
+													"type": "string"
+												},
+												{
+													"name": "Value",
+													"type": "string"
+												}
+											]
+										}
+									}
+								],
+								"default": null
+							}
+						]
+					}
+				},
+				{
+					"name": "ContactInfo",
+					"type": [
+						"null",
+						{
+							"type": "record",
+							"name": "ContactInfo",
+							"fields": [{
+								"name": "PlanTypeInfo",
+								"type": {
+									"type": "array",
+									"items": {
+										"type": "record",
+										"name": "PlanTypeInfo",
+										"fields": [{
+												"name": "IsParent",
+												"type": [
+													"boolean",
+													"null"
+												],
+												"default": false
+											},
+											{
+												"name": "CarrierName",
+												"type": "string"
+											},
+											{
+												"name": "PlanType",
+												"type": [
+													"null",
+													"string"
+												],
+												"default": null
+											},
+											{
+												"name": "Description",
+												"type": [
+													"null",
+													"string"
+												],
+												"default": null
+											},
+											{
+												"name": "TelephoneNumber",
+												"type": [
+													"null",
+													"string"
+												],
+												"default": null
+											},
+											{
+												"name": "HoursOfOperations",
+												"type": [
+													"null",
+													"string"
+												],
+												"default": null
+											},
+											{
+												"name": "DaysOfWeek",
+												"type": [
+													"null",
+													"string"
+												],
+												"default": null
+											},
+											{
+												"name": "UrlDesc",
+												"type": [
+													"null",
+													"string"
+												],
+												"default": null
+											},
+											{
+												"name": "Url",
+												"type": [
+													"null",
+													"string"
+												],
+												"default": null
+											}
+										]
+									}
+								}
+							}]
+						}
+					],
+					"default": null
+				},
+				{
+					"name": "BenefitPlanCSRSection",
+					"type": [
+						"null",
+						{
+							"type": "record",
+							"name": "BenefitPlanCSRSection",
+							"fields": [{
+								"name": "BenefitPlanCSR",
+								"type": {
+									"type": "array",
+									"items": {
+										"type": "record",
+										"name": "BenefitPlanCSR",
+										"fields": [{
+												"name": "BenefitPlanCSRSectionName",
+												"type": [
+													"null",
+													"string"
+												],
+												"default": null
+											},
+											{
+												"name": "BenefitPlanCSRName",
+												"type": "string"
+											},
+											{
+												"name": "BenefitPlanCSRLanguageDescription",
+												"type": [
+													"null",
+													"string"
+												],
+												"default": null
+											},
+											{
+												"name": "BenefitPlanCSRInformation",
+												"type": [
+													"null",
+													{
+														"type": "array",
+														"items": {
+															"type": "record",
+															"name": "BenefitPlanCSRInformation",
+															"fields": [{
+																	"name": "BenefitPlanCSRInformationTypeCode",
+																	"type": [
+																		"null",
+																		"string"
+																	],
+																	"default": null
+																},
+																{
+																	"name": "BenefitPlanCSRInformationTypeDescription",
+																	"type": {
+																		"type": "array",
+																		"items": "string"
+																	}
+																},
+																{
+																	"name": "BenefitPlanCSRInformationTypeLanguageDescription",
+																	"type": "string"
+																},
+																{
+																	"name": "BenefitOrder",
+																	"type": [
+																		"null",
+																		"string"
+																	],
+																	"default": null
+																}
+															]
+														}
+													}
+												],
+												"default": null
+											},
+											{
+												"name": "BenefitPlanCSRNetwork",
+												"type": [
+													"null",
+													{
+														"type": "array",
+														"items": {
+															"type": "record",
+															"name": "BenefitPlanCSRNetwork",
+															"fields": [{
+																	"name": "BenefitPlanCSRNetworkTypeCode",
+																	"type": [
+																		"null",
+																		"string"
+																	],
+																	"default": null
+																},
+																{
+																	"name": "BenefitPlanCSRNetworkTier",
+																	"type": [
+																		"null",
+																		"string"
+																	],
+																	"default": null
+																},
+																{
+																	"name": "BenefitPlanCSRNetworkTypeDescription",
+																	"type": {
+																		"type": "array",
+																		"items": "string"
+																	}
+																},
+																{
+																	"name": "BenefitPlanCSRNetworkLanguageDescription",
+																	"type": "string"
+																},
+																{
+																	"name": "BenefitOrder",
+																	"type": [
+																		"null",
+																		"string"
+																	],
+																	"default": null
+																}
+															]
+														}
+													}
+												],
+												"default": null
+											}
+										]
+									}
+								}
+							}]
+						}
+					],
+					"default": null
+				},
+				{
+					"name": "BenefitPlanCostShareSections",
+					"type": [
+						"null",
+						{
+							"type": "record",
+							"name": "BenefitPlanCostShareSections",
+							"fields": [{
+								"name": "PlanCostShareSection",
+								"type": {
+									"type": "array",
+									"items": {
+										"type": "record",
+										"name": "PlanCostShareSection",
+										"fields": [{
+												"name": "PlanCostShareSectionName",
+												"type": "string"
+											},
+											{
+												"name": "PlanCostShare",
+												"type": {
+													"type": "array",
+													"items": {
+														"type": "record",
+														"name": "PlanCostShare",
+														"fields": [{
+																"name": "PlanCostShareTypeCode",
+																"type": [
+																	"null",
+																	"string"
+																],
+																"default": null
+															},
+															{
+																"name": "PlanCostShareTypeDescription",
+																"type": "string"
+															},
+															{
+																"name": "PlanCostShareLanguageDescription",
+																"type": [
+																	"null",
+																	"string"
+																],
+																"default": null
+															},
+															{
+																"name": "PlanCostShareLimitsAndExceptionsLanguageDescription",
+																"type": [
+																	"null",
+																	"string"
+																],
+																"default": null
+															},
+															{
+																"name": "PlanCostShareInformation",
+																"type": [
+																	"null",
+																	{
+																		"type": "array",
+																		"items": {
+																			"type": "record",
+																			"name": "PlanCostShareInformation",
+																			"fields": [{
+																					"name": "PlanCostShareInformationTypeCode",
+																					"type": [
+																						"null",
+																						"string"
+																					],
+																					"default": null
+																				},
+																				{
+																					"name": "PlanCostShareInformationTypeDescription",
+																					"type": {
+																						"type": "array",
+																						"items": "string"
+																					}
+																				},
+																				{
+																					"name": "PlanCostShareInformationLanguageDescription",
+																					"type": "string"
+																				},
+																				{
+																					"name": "BenefitOrder",
+																					"type": [
+																						"null",
+																						"string"
+																					],
+																					"default": null
+																				}
+																			]
+																		}
+																	}
+																],
+																"default": null
+															},
+															{
+																"name": "PlanCostShareNetwork",
+																"type": [
+																	"null",
+																	{
+																		"type": "array",
+																		"items": {
+																			"type": "record",
+																			"name": "PlanCostShareNetwork",
+																			"fields": [{
+																					"name": "PlanCostShareNetworkTypeCode",
+																					"type": [
+																						"null",
+																						"string"
+																					],
+																					"default": null
+																				},
+																				{
+																					"name": "PlanCostShareTier",
+																					"type": [
+																						"null",
+																						"string"
+																					],
+																					"default": null
+																				},
+																				{
+																					"name": "PlanCostShareNetworkTypeDescription",
+																					"type": {
+																						"type": "array",
+																						"items": "string"
+																					}
+																				},
+																				{
+																					"name": "PlanCostShareNetworkLanguageDescription",
+																					"type": "string"
+																				},
+																				{
+																					"name": "BenefitOrder",
+																					"type": [
+																						"null",
+																						"string"
+																					],
+																					"default": null
+																				}
+																			]
+																		}
+																	}
+																],
+																"default": null
+															}
+														]
+													}
+												}
+											},
+											{
+												"name": "PlanCostShareCSR",
+												"type": [
+													"null",
+													{
+														"type": "array",
+														"items": {
+															"type": "record",
+															"name": "PlanCostShareCSR",
+															"fields": [{
+																	"name": "PlanCostShareCSRName",
+																	"type": "string"
+																},
+																{
+																	"name": "PlanCostShareCSRLanguageDescription",
+																	"type": [
+																		"null",
+																		"string"
+																	],
+																	"default": null
+																},
+																{
+																	"name": "PlanCostShareCSRInformation",
+																	"type": [
+																		"null",
+																		{
+																			"type": "array",
+																			"items": {
+																				"type": "record",
+																				"name": "PlanCostShareCSRInformation",
+																				"fields": [{
+																						"name": "PlanCostShareCSRInformationTypeCode",
+																						"type": [
+																							"null",
+																							"string"
+																						],
+																						"default": null
+																					},
+																					{
+																						"name": "PlanCostShareCSRInformationTypeDescription",
+																						"type": {
+																							"type": "array",
+																							"items": "string"
+																						}
+																					},
+																					{
+																						"name": "PlanCostShareCSRInformationLanguageDescription",
+																						"type": "string"
+																					},
+																					{
+																						"name": "BenefitOrder",
+																						"type": [
+																							"null",
+																							"string"
+																						],
+																						"default": null
+																					}
+																				]
+																			}
+																		}
+																	],
+																	"default": null
+																},
+																{
+																	"name": "PlanCostShareCSRNetwork",
+																	"type": [
+																		"null",
+																		{
+																			"type": "array",
+																			"items": {
+																				"type": "record",
+																				"name": "PlanCostShareCSRNetwork",
+																				"fields": [{
+																						"name": "PlanCostShareCSRNetworkTypeCode",
+																						"type": [
+																							"null",
+																							"string"
+																						],
+																						"default": null
+																					},
+																					{
+																						"name": "PlanCostShareCSRNetworkTier",
+																						"type": [
+																							"null",
+																							"string"
+																						],
+																						"default": null
+																					},
+																					{
+																						"name": "PlanCostShareCSRNetworkTypeDescription",
+																						"type": {
+																							"type": "array",
+																							"items": "string"
+																						}
+																					},
+																					{
+																						"name": "PlanCostShareCSRNetworkLanguageDescription",
+																						"type": "string"
+																					},
+																					{
+																						"name": "BenefitOrder",
+																						"type": [
+																							"null",
+																							"string"
+																						],
+																						"default": null
+																					}
+																				]
+																			}
+																		}
+																	],
+																	"default": null
+																}
+															]
+														}
+													}
+												],
+												"default": null
+											}
+										]
+									}
+								}
+							}]
+						}
+					],
+					"default": null
+				},
+				{
+					"name": "BenefitPlanSections",
+					"type": {
+						"type": "record",
+						"name": "BenefitPlanSections",
+						"fields": [{
+							"name": "BenefitSection",
+							"type": {
+								"type": "array",
+								"items": {
+									"type": "record",
+									"name": "BenefitSection",
+									"fields": [{
+											"name": "BenefitSectionID",
+											"type": [
+												"null",
+												"string"
+											],
+											"default": null
+										},
+										{
+											"name": "BenefitSectionCode",
+											"type": [
+												"null",
+												"string"
+											],
+											"default": null
+										},
+										{
+											"name": "BenefitSectionName",
+											"type": "string"
+										},
+										{
+											"name": "Benefit",
+											"type": {
+												"type": "array",
+												"items": {
+													"type": "record",
+													"name": "Benefit",
+													"fields": [{
+															"name": "BenefitID",
+															"type": [
+																"null",
+																"string"
+															],
+															"default": null
+														},
+														{
+															"name": "BenefitCode",
+															"type": [
+																"null",
+																"string"
+															],
+															"default": null
+														},
+														{
+															"name": "BenefitName",
+															"type": "string"
+														},
+														{
+															"name": "BenefitSummaryText",
+															"type": [
+																"null",
+																"string"
+															],
+															"default": null
+														},
+														{
+															"name": "BenefitCoverageTypeCode",
+															"type": [
+																"null",
+																"string"
+															],
+															"default": null
+														},
+														{
+															"name": "BenefitLanguageDescription",
+															"type": [
+																"null",
+																"string"
+															],
+															"default": null
+														},
+														{
+															"name": "BenefitGroup",
+															"type": [
+																"null",
+																"string"
+															],
+															"default": null
+														},
+														{
+															"name": "BenefitInformation",
+															"type": [
+																"null",
+																{
+																	"type": "array",
+																	"items": {
+																		"type": "record",
+																		"name": "BenefitInformation",
+																		"fields": [{
+																				"name": "AboutMemberBenefitTypeCode",
+																				"type": [
+																					"null",
+																					"string"
+																				],
+																				"default": null
+																			},
+																			{
+																				"name": "AboutMemberBenefitTypeDescription",
+																				"type": {
+																					"type": "array",
+																					"items": "string"
+																				}
+																			},
+																			{
+																				"name": "AboutMemberBenefitLanguageDescription",
+																				"type": "string"
+																			},
+																			{
+																				"name": "BenefitOrder",
+																				"type": [
+																					"null",
+																					"string"
+																				],
+																				"default": null
+																			}
+
+																		]
+																	}
+																}
+															],
+															"default": null
+														},
+														{
+															"name": "BenefitCostShareNetwork",
+															"type": [
+																"null",
+																{
+																	"type": "array",
+																	"items": {
+																		"type": "record",
+																		"name": "BenefitCostShareNetwork",
+																		"fields": [{
+																				"name": "BenefitCostShareNetworkTypeCode",
+																				"type": [
+																					"null",
+																					"string"
+																				],
+																				"default": null
+																			},
+																			{
+																				"name": "BenefitCostShareTier",
+																				"type": [
+																					"null",
+																					"string"
+																				],
+																				"default": null
+																			},
+																			{
+																				"name": "BenefitCostShareNetworkTypeDescription",
+																				"type": {
+																					"type": "array",
+																					"items": "string"
+																				}
+																			},
+																			{
+																				"name": "BenefitCostShareNetworkLanguageDescription",
+																				"type": "string"
+																			},
+																			{
+																				"name": "BenefitOrder",
+																				"type": [
+																					"null",
+																					"string"
+																				],
+																				"default": null
+																			}
+																		]
+																	}
+																}
+															],
+															"default": null
+														},
+														{
+															"name": "BenefitLimitsAndExceptionsLanguageDescription",
+															"type": [
+																"null",
+																"string"
+															],
+															"default": null
+														},
+														{
+															"name": "BenefitPlanProcessingCodes",
+															"type": [
+																"null",
+																{
+																	"type": "record",
+																	"name": "BenefitPlanProcessingCodes",
+																	"fields": [{
+																		"name": "Item",
+																		"type": [
+																			"null",
+																			{
+																				"type": "array",
+																				"items": {
+																					"type": "record",
+																					"name": "Item",
+																					"fields": [{
+																							"name": "HCPCSID",
+																							"type": "string"
+																						},
+																						{
+																							"name": "HCPCSText",
+																							"type": "string"
+																						}
+																					]
+																				}
+																			}
+																		],
+																		"default": null
+																	}]
+																}
+															],
+															"default": null
+														},
+														{
+															"name": "BenefitServices",
+															"type": [
+																"null",
+																{
+																	"type": "record",
+																	"name": "BenefitServices",
+																	"fields": [{
+																		"name": "Service",
+																		"type": [
+																			"null",
+																			{
+																				"type": "array",
+																				"items": {
+																					"type": "record",
+																					"name": "Service",
+																					"fields": [{
+																							"name": "Service_Name",
+																							"type": "string"
+																						},
+																						{
+																							"name": "HIPAA_SVC_Type_CD",
+																							"type": "string"
+																						},
+																						{
+																							"name": "Flag",
+																							"type": "string"
+																						}
+																					]
+																				}
+																			}
+																		],
+																		"default": null
+																	}]
+																}
+															],
+															"default": null
+														},
+														{
+															"name": "BenefitClassifications",
+															"type": [
+																"null",
+																{
+																	"type": "record",
+																	"name": "BenefitClassifications",
+																	"fields": [{
+																		"name": "Classification",
+																		"type": [
+																			"null",
+																			{
+																				"type": "array",
+																				"items": "string"
+																			}
+																		],
+																		"default": null
+																	}]
+																}
+															],
+															"default": null
+														},
+														{
+															"name": "BenefitRules",
+															"type": [
+																"null",
+																{
+																	"type": "record",
+																	"name": "BenefitRules",
+																	"fields": [{
+																		"name": "BenefitRule",
+																		"type": [
+																			"null",
+																			{
+																				"type": "array",
+																				"items": {
+																					"type": "record",
+																					"name": "BenefitRule",
+																					"fields": [{
+																							"name": "BenefitRuleID",
+																							"type": "string"
+																						},
+																						{
+																							"name": "BenefitRuleBody",
+																							"type": "string"
+																						}
+																					]
+																				}
+																			}
+																		],
+																		"default": null
+																	}]
+																}
+															],
+															"default": null
+														}
+													]
+												}
+											}
+										},
+										{
+											"name": "BenefitCSR",
+											"type": [
+												"null",
+												{
+													"type": "array",
+													"items": {
+														"type": "record",
+														"name": "BenefitCSR",
+														"fields": [{
+																"name": "BenefitCSRName",
+																"type": "string"
+															},
+															{
+																"name": "BenefitCSRLanguageDescription",
+																"type": [
+																	"null",
+																	"string"
+																],
+																"default": null
+															},
+															{
+																"name": "BenefitCSRInformation",
+																"type": [
+																	"null",
+																	{
+																		"type": "array",
+																		"items": {
+																			"type": "record",
+																			"name": "BenefitCSRInformation",
+																			"fields": [{
+																					"name": "BenefitCSRInformationTypeCode",
+																					"type": [
+																						"null",
+																						"string"
+																					],
+																					"default": null
+																				},
+																				{
+																					"name": "BenefitCSRInformationTypeDescription",
+																					"type": {
+																						"type": "array",
+																						"items": "string"
+																					}
+																				},
+																				{
+																					"name": "BenefitCSRInformationLanguageDescription",
+																					"type": "string"
+																				},
+																				{
+																					"name": "BenefitOrder",
+																					"type": [
+																						"null",
+																						"string"
+																					],
+																					"default": null
+																				}
+																			]
+																		}
+																	}
+																],
+																"default": null
+															},
+															{
+																"name": "BenefitCostShareCSRNetwork",
+																"type": [
+																	"null",
+																	{
+																		"type": "array",
+																		"items": {
+																			"type": "record",
+																			"name": "BenefitCostShareCSRNetwork",
+																			"fields": [{
+																					"name": "BenefitCostShareCSRNetworkTypeCode",
+																					"type": [
+																						"null",
+																						"string"
+																					],
+																					"default": null
+																				},
+																				{
+																					"name": "BenefitCostShareCSRNetworkTier",
+																					"type": [
+																						"null",
+																						"string"
+																					],
+																					"default": null
+																				},
+																				{
+																					"name": "BenefitCostShareCSRNetworkTypeDescription",
+																					"type": {
+																						"type": "array",
+																						"items": "string"
+																					}
+																				},
+																				{
+																					"name": "BenefitCostShareCSRNetworkLanguageDescription",
+																					"type": "string"
+																				},
+																				{
+																					"name": "BenefitOrder",
+																					"type": [
+																						"null",
+																						"string"
+																					],
+																					"default": null
+																				}
+																			]
+																		}
+																	}
+																],
+																"default": null
+															}
+														]
+													}
+												}
+											],
+											"default": null
+										}
+									]
+								}
+							}
+						}]
+					}
+				}
+			]
+		}
+	}]
+}

@@ -1,0 +1,91 @@
+{
+    "type": "record",
+    "name": "BenefitPlanKey",
+    "namespace": "com.optum.b360.canonicalmodel.model",
+    "doc": "Represents a domain model of benefitPlan",
+    "fields": [
+        {
+            "name": "planIdentifier",
+            "type": [
+                "null",
+                {
+                    "type": "string"
+                }
+            ],
+            "default": null,
+            "doc": "Unique Identifier for a customer plan, specific to a member group."
+        },
+        {
+            "name": "fileName",
+            "type": [
+                "null",
+                "string"
+            ],
+            "default": null
+        },
+        {
+            "name": "revisionDate",
+            "type": "long",
+            "logicalType": "timestamp-millis",
+            "default": 4765176000
+        },
+        {
+            "name": "lineOfBusiness",
+            "type": [
+                "null",
+                "string"
+            ],
+            "default": null
+        },
+        {
+            "name": "docType",
+            "type": [
+                "null",
+                "string"
+            ],
+            "default": null
+        },
+        {
+            "name": "transactionId",
+            "type": [
+                "null",
+                "string"              
+            ],
+            "default": null,
+            "doc": "Unique transaction Id for each document."
+        },
+        {
+            "name": "additionalInfo",
+            "type": [
+                "null",
+                {
+                    "type": "array",
+                    "items": {
+                        "type": "record",
+                        "name": "additionalInfo",
+                        "fields": [
+                            {
+                                "name": "type",
+                                "type": [
+                                    "null",
+                                    "string"
+                                ],
+                                "default": null
+                            },
+                            {
+                                "name": "key",
+                                "type": "string"
+                            },
+                            {
+                                "name": "value",
+                                "type": "string"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "default": null,
+            "doc": "For any other additional information."
+        }
+    ]
+}
